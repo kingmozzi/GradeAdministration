@@ -1,0 +1,12 @@
+#### build output
+*.o
+*.out
+*.exe
+
+#### data file
+*.csv
+*.bi
+*.txt
+
+#### vscode folder
+.vscode/

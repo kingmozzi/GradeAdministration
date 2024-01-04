@@ -1,0 +1,17 @@
+app.out: main.o Student.o DB.o strhandler.o sort.o
+	gcc -o app.out main.o Student.o DB.o strhandler.o sort.o
+
+main.o: Student.h DB.h strhandler.h sort.h main.c
+	gcc -c -o main.o main.c
+
+Student.o: Student.h strhandler.h Student.c
+	gcc -c -o Student.o Student.c
+
+DB.o: DB.h strhandler.h DB.c
+	gcc -c -o DB.o DB.c
+
+strhandler.o: strhandler.h strhandler.c
+	gcc -c -o strhandler.o strhandler.c
+
+sort.o: sort.h sort.c
+	gcc -c -o sort.o sort.c
